@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url("src/assets/vendor/fonts/RobotoFlex-VariableFont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'UbuntuRegular';
+  src: url("src/assets/vendor//fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'UbuntuLightItalic';
+  src: url("src/assets/vendor/fonts/Ubuntu-LightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}

@@ -1,0 +1,44 @@
+@import "./vendor/normalize.css";
+@import "./vendor/fonts.css";
+
+:root {
+  --font-title: "RobotoFlex", Arial, Helvetica, sans-serif;
+  --font-main: "UbuntuRegular", Arial, Helvetica, sans-serif;
+  --font-quote: "UbuntuLightItalic", Arial Helvetica, sans-serif;
+  
+  --font-size-title: 142px;
+  --font-size-title-mobile: 41px;
+  --font-size-subtitle: 48px;
+  --font-size-subtitle-mobile: 18px;
+  --font-size-quote: 30px;
+  --font-size-quote-mobile: 16px;
+  --font-size-description: 24px;
+  --font-size-description-mobile: 12px;
+  --font-size-main: 24px;
+  --font-size-main-mobile: 16px;
+
+  --font-weight-title: 700;
+  --font-weight-subtitle: 400;
+  --font-weight-quote: 300;
+  --font-weight-description: 400;
+  --font-weight-main: 400;
+
+  --line-height-title: 88%;
+  --line-height-subtitle: 100%;
+  --line-height-quote: 100%;
+  --line-height-description: 100%;
+  --line-height-main: 125%;
+
+  --color-background: #eee;
+  --color-accent: #c11414;
+  --color-text-primary: #000;
+  --color-text-secondary: #7e7e7e;  
+
+  --padding-1: 8px;
+  --padding-2: 16px;
+  --padding-3: 24px;
+  --padding-4: 32px;
+  --padding-5: 40px;
+  --padding-10: 80px;
+  --padding-16: 128px;
+}
