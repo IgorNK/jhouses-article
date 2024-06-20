@@ -4,6 +4,13 @@
   import QuoteBlock from "../components/QuoteBlock.vue";
   import Modal from "../components/Modal.vue";
 
+  const image0 = new URL('../assets/images/mak-oTHW-Gl9MPg-unsplash.jpg', import.meta.url).href;
+  const image1 = new URL('../assets/images/david-emrich-9a0S_8bU0lo-unsplash.jpg', import.meta.url).href;
+  const image2 = new URL('../assets/images/julie-fader-I4plBnRzJ94-unsplash.jpg', import.meta.url).href;
+  const image3 = new URL('../assets/images/sava-bobov-24c1mCPTa0E-unsplash.jpg', import.meta.url).href;
+  const image4 = new URL('../assets/images/falco-negenman-K8MMfFifWcE-unsplash.jpg', import.meta.url).href;
+  const image5 = new URL('../assets/images/xiaocong-yan-M9NTnUlNiEM-unsplash.jpg', import.meta.url).href;
+  
   const isModalOpened = ref(false);
 
   const modalImage = ref("");
@@ -34,7 +41,7 @@
     </div>
     
     <div class="article-main__image-quote-container">
-      <ImageBlock @click="handleImageClick" class="article-main__image-quote-container__image" src="src/assets/images/mak-oTHW-Gl9MPg-unsplash.jpg" alt="Интерьер традиционного японского дома" />
+      <ImageBlock @click="handleImageClick" class="article-main__image-quote-container__image" :src="image0" alt="Интерьер традиционного японского дома" />
       <QuoteBlock class="article-main__quote"><p>В&nbspтрадиционных японских домах комнаты отделяются друг от&nbspдруга с&nbspпомощью раздвижных дверей, называемых «<span class="article-main__accent">фусума</span>». Это позволяет изменять конфигурацию помещения в&nbspзависимости от&nbspпотребностей&nbspхозяев.</p></QuoteBlock>
     </div>
 
@@ -44,7 +51,7 @@
     </div>
   
     <div class="article-main__image-block-column">
-      <ImageBlock @click="handleImageClick" src="src/assets/images/david-emrich-9a0S_8bU0lo-unsplash.jpg" alt="Японский сад, сочетающий естественность и&nbspтщательную проработку ландшафта" />
+      <ImageBlock @click="handleImageClick" :src="image1" alt="Японский сад, сочетающий естественность и&nbspтщательную проработку ландшафта" />
     </div>
   
     <div class="article-main__quote-block-centered">
@@ -54,7 +61,7 @@
     </div>
   
     <div class="article-main__image-block-column">
-      <ImageBlock @click="handleImageClick" src="src/assets/images/julie-fader-I4plBnRzJ94-unsplash.jpg" alt="Вход в дом" />
+      <ImageBlock @click="handleImageClick" :src="image2" alt="Вход в дом" />
     </div>
   
     <div class="article-main__text-block">
@@ -64,7 +71,7 @@
     </div>
   
     <div class="article-main__image-block-full">
-      <ImageBlock @click="handleImageClick" src="src/assets/images/sava-bobov-24c1mCPTa0E-unsplash.jpg" alt="Интерьер традиционного японского дома. Раздвижные двери и низкий столик" />
+      <ImageBlock @click="handleImageClick" :src="image3" alt="Интерьер традиционного японского дома. Раздвижные двери и низкий столик" />
     </div>
   
     <div class="article-main__quote-block-centered">
@@ -72,12 +79,12 @@
     </div>
 
     <div class="article-main__image-quote-container">
-      <ImageBlock @click="handleImageClick" class="article-main__image-quote-container__image" src="src/assets/images/falco-negenman-K8MMfFifWcE-unsplash.jpg" alt="Японский сад" />
+      <ImageBlock @click="handleImageClick" class="article-main__image-quote-container__image" :src="image4" alt="Японский сад" />
       <QuoteBlock class="article-main__quote"><p>Японские традиционные дома продолжают вдохновлять современных архитекторов по&nbspвсему миру. Многие современные здания сочетают в&nbspсебе элементы старинной японской архитектуры с&nbspсовременными технологиями и&nbspматериалами.</p></QuoteBlock>
     </div>
 
     <div class="article-main__image-block-full">
-      <ImageBlock @click="handleImageClick" src="src/assets/images/xiaocong-yan-M9NTnUlNiEM-unsplash.jpg" alt="Интерьер дома" />
+      <ImageBlock @click="handleImageClick" :src="image5" alt="Интерьер дома" />
     </div>
 
     <div class="article-main__author-block">
@@ -100,7 +107,7 @@
     margin-left: 100px;
     margin-right: 100px;
     margin-top: var(--padding-10);
-    max-width: 100vw;
+    max-width: min(calc(100vw - 200px), calc(1440px - 200px));
     display: flex;
     flex-direction: column;
     row-gap: var(--padding-10);
@@ -214,6 +221,7 @@
       margin-right: var(--padding-2);
       margin-top: var(--padding-4);
       row-gap: var(--padding-4);
+      max-width: calc(100vw - var(--padding-4));
     }
 
     .article-main__text-block {

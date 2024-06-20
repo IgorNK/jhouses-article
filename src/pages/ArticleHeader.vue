@@ -1,10 +1,11 @@
 <script setup lang="ts">
   import QuoteBlock from "../components/QuoteBlock.vue";
+  const titleUrl = new URL('../assets/images/article_title.png', import.meta.url).href;
 </script>
 
 <template>
   <div class="article-header">
-    <div class="image-block"/>
+    <div class="image-block" :style="{'background-image': 'url(' + titleUrl + ')'}"/>
     <p class="image-alt">Украшение окон</p>
     <QuoteBlock class="quote-block">
       Традиционный японский дом&nbsp— это не&nbspтолько красивое и&nbspфункциональное строение, но&nbspи&nbspодин из&nbspважнейших символов японской культуры.
@@ -34,14 +35,13 @@
       "image quote"
       "image author"
       "alt none";
-    max-width: 100vw;
+    max-width: 1440px;
   }
 
   .image-block {
     margin: 0;
     padding: 0;
     grid-area: image;
-    background-image: url("src/assets/images/article_title.png");
     background-position: right;
     height: 823px;
     max-width: 829px;
@@ -93,8 +93,8 @@
   }
 
   @media (max-width: 768px) {
-
     .article-header {
+      max-width: 100vw;
       margin-right: var(--padding-2);
       margin-top: var(--padding-2);
       display: flex;

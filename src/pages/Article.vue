@@ -23,6 +23,15 @@
 
 <style scoped>
   .article {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(1440px, 100vw);
     background-color: var(--color-background);
+  }
+
+  @media (max-width: 768px) {
+    max-width: unset;
   }
 </style>
